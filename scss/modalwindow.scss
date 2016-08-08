@@ -1,0 +1,70 @@
+/////модальное окно//////////////////
+@import "scss/myvar.scss";//общие для всех файлов стилей переменные
+
+//окно полупрозрачное, как подложка
+.modal {
+  &_bg {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: $color-font;
+  }
+
+  //собственно модальное окно
+  &_window {
+    position: absolute;
+    display: none;
+    left: 60%;
+    z-index: 1100;
+    width: 500px;
+    height: 70px;
+    margin-left: -250px;
+    margin-top: -80px;
+    background: transparent;
+    //opacity: 0.5;
+  }
+
+  ///////содержимое модального окна///////////////////
+  //чтоб на картинку накладывался текст, надо картинка- relative, текст - absolute
+  &-image {
+    position: relative;
+    left: -150px;
+    top: -90px;
+    > img {
+      width: 610px;
+      height: 400px;
+    }
+  }
+
+  &-textcloud {
+    position: absolute;
+    top: 140px;
+    left: 42px;
+    width: 100%;
+    color: $color-font-aboutme;
+    font-family: $fontfamily;
+    font-size: 18px;
+    font-style: italic;
+    background: transparent;
+    div{
+      text-align: right;
+    }
+
+  }
+}
+
+  //кнопка закрыть
+  #modal-cloudclose {
+    position: absolute;
+    top: 60px;
+    left: 480px;
+    color: $color-font-aboutme;
+    font-size: $font-size-nav+5;
+    background: transparent;
+  }
+
+  #modal-cloudclose:hover {
+    font-size: $font-size-nav+6;
+  }

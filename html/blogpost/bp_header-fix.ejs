@@ -1,0 +1,60 @@
+
+<!-- код для фиксированного вверху header вынуждена расположить внизу, т.к. проставление-->
+<!-- z-index для элементов bootstrap не помогло (основной блок при скроллинге лез поверх фиксированного header)-->
+<!-- Но и с точки зрения поисковика в данном случае не критично - никаких ключевых слов здесь нет)-->
+<!-- Для семантики - nav.  -->
+<div class="header-main">   <!-- собственно header, фиксиров вверху, белый -->
+
+    <div class="header-up-left">
+        <div>  <span><img class="logo" src="../img/blogpost/bp_logopng24.png" alt="" /></span> </div> <!--Logo-->
+        <img src="../img/blogpost/bp_truck.gif">                                                <!-- Truck-->
+        <span>FREE SHIPPING ON ALL ORDERS EXTENDED TO JULY 31<span>                <!--Shipping-->
+    </div>
+    <ul class="header-up-right">
+        <li><a href="#">My Account</a><span>|</span></li>
+        <li><a href="#">Track Order</a><span>|</span></li>
+        <li><a href="#">Wishlist</a><span>|</span></li>
+        <li><a href="#">Sign Out</a></li>
+    </ul>
+
+
+
+
+    <!-- меню  адаптивное    прижато к низу окна header-main-->
+    <!-- Navigation-->
+    <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- сворачивание меню в кнопку-три точки в случае коллапса - сворачивание экрана до размеров мобилки. Атрибуты начинающие с data отвечают за взаимодействие Html и Джаваскрипта.-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--
+            <div class="navbar-header page-scroll">
+                <div class="navbar-brand">
+                </div>
+            </div>  -->
+
+
+            <div class="collapse navbar-collapse navbar-left" id="collapse">   <!--navbar-left-->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Products     </a></li>
+                    <li><a href="#">Buyer's Guide</a></li>
+                    <li><a href="#">Blog         </a></li>
+                    <li><a href="#">Your Cart    <span id="header-up-right-digit">(4)</span>   </a></li>
+                </ul>
+            </div >
+
+                <div class="header-search-div">
+                    <input type="search" class="input-w" placeholder="Search Costgro">
+                    <span class="input-span"><i class="glyphicon glyphicon-search"></i></span>
+                </div>
+        </nav>
+
+    </div>
+
+</div>    <!-- header-main-->

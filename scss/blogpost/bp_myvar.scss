@@ -1,0 +1,74 @@
+
+//переменные из js\blogpost/bp_sc.js ( должны быть одинаковые)
+$color-body               : #f3efe4; //беж
+$color-main-button        : #e8930c; //оранжевый шрифт
+$title-img-align-bottom   :10%;
+
+//переменные из js\blogpost/bp_check_email.js ( должны быть одинаковые)
+$color-content            : #ffffff;
+
+
+$document-width           : 1210px; //ширина макета
+$step                     : 50px;   //шаг сетки макета
+$header-height            : 90px;   //высота заголовка header
+$body-rim                 : 40px;   //бежевый обод - верхний и нижний
+$margin : ($body-rim*3+5)/$document-width*100%;// 10%= 125/1210 бежевые ободы боковые
+$title-img-align-left     : $margin/2;//5%; отступы текста внутри главной картинки
+$mainblogpost-korrekt     : $step/2;//25px; корректировка выравнивания колонок bootstrap
+//$title-img-align-bottom   :10%; см вверху в зоне определения общих с JS переменных
+
+$color-footer             : #7D9642;
+$color-footer-hr          : #9cba53;
+$color-header-left        : #c4b07a;
+$color-light              : #a3a78b; //светл серо-оливк
+$color-dark               : #4a4f2a; //темн черно-серо-оливко
+$color-post               : #898989; //темно-серый
+$color-avatar             : #b3b3b3; //светло-серый
+
+$font-size-header-up      : 10px;
+$font-size-main-hea       : 14px;
+$font-size-mainblogpost-h : 24px;
+
+
+$fontfamily: Geneva, Arial, Helvetica, sans-serif;
+
+
+
+/* шрифт NotoSans      как-то не очень красив
+//для борьбы с IE < 9   - используем символ ? (самый лучший вариант обмана IE)
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/fonts/NotoSans-Regular-webfont.eot?') format('eot'),
+       url('/fonts/NotoSans-Regular-webfont.woff') format('woff'),
+       url('/fonts/NotoSans-Regular-webfont.ttf') format('truetype'),
+       url('/fonts/NotoSans-Regular-webfont.svg#svgFontName') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansBold';
+  src: url('/fonts/NotoSans-Bold-webfont.eot?') format('eot'),
+       url('/fonts/NotoSans-Bold-webfont.woff') format('woff'),
+       url('/fonts/NotoSans-Bold-webfont.ttf')  format('truetype'),
+       url('/fonts/NotoSans-Bold-webfont.svg#svgFontName') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'NotoSansItalic';
+  src: url('/fonts/NotoSans-Italic-webfont.eot?') format('eot'),
+       url('/fonts/NotoSans-Italic-webfont.woff') format('woff'),
+       url('/fonts/NotoSans-Italic-webfont.ttf')  format('truetype'),
+       url('/fonts/NotoSans-Italic-webfont.svg#svgFontName') format('svg');
+  font-style: italic;
+  font-weight: normal;
+  }
+
+$fontfamily: NotoSans, Geneva, Arial, Helvetica, sans-serif;;
+*/
+
+
+
+

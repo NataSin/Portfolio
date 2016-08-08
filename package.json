@@ -1,0 +1,39 @@
+{
+  "name": "amway",
+  "version": "1.0.0",
+  "description": "Amway general site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "epam",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^0.4.4",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssimport": "^3.0.2",
+    "gulp-csslint": "^0.3.0",
+    "gulp-ejs": "^2.1.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.2",
+    "jshint": "^2.9.2",
+    "node-sass": "^3.4.2",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^3.2.0",
+    "susy": "^2.2.12",
+    "gulp-connect": "^4.0.0"
+  }
+}

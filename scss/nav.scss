@@ -1,0 +1,116 @@
+///////////////////////////////////////////////////////////////////////
+//навигационное меню bootstrapa
+@import "scss/myvar.scss";//общие для всех файлов стилей переменные
+
+
+
+.navbar-shadow{
+  text-shadow: 0 1px 1px rgba(0,0,0,.7);
+}
+
+.navbar-inverse{
+  background-color: $color-body;//transparent;
+  border-color: transparent;
+  font-size: $font-size-nav;
+  font-family: $fontfamily;
+
+  .navbar-toggle {
+    border-color: $color-body;
+  }
+
+  .navbar-nav {
+    > .active > a,
+    > .active > a:focus {
+      color: $color-font; //золотистый
+      background-color: transparent; //#080808;
+    }
+
+    > .active > a:hover {
+      color: white;
+      background-color: transparent; // $color-body;
+      font-size: $font-size-nav+1;
+    }
+
+
+  }  //.navbar-nav
+
+}//.navbar-inverse
+
+
+
+.navbar-toggle:hover {
+  background-color: $color-body;
+}
+
+
+.navbar .nav > li > a {
+  color: $color-font;
+}
+
+.navbar .nav > li > a:hover {
+  background-color: transparent; //$color-body;
+  font-size: 20px;
+}
+
+/*  было до кода ривью
+
+///////////////////////////////////////////////////////////////////////
+//навигационное меню bootstrapa
+.navbar-shadow {
+  text-shadow: 0 1px 1px rgba(0,0,0,.7);
+}
+
+// фиксируем меню немного ниже
+.navbar-fixed-top {
+  top: 20px;
+}
+
+.navbar-inverse {
+  background-color: transparent;//прозрачность
+  //background: url("../img/Fr.jpg");
+  border-color: transparent; //$color-body;
+  font-size: 23px;
+  font-family: $fontfamily;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: $color-body;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus {
+  color: $color-font;//золотистый
+  background-color: transparent; //#080808;
+}
+
+.navbar-inverse .navbar-nav>.active>a:hover {
+  color: white;
+  background-color: transparent; // $color-body;
+  //font-size: 20px;
+}
+
+.navbar-toggle:hover {
+  background-color: $color-body;
+}
+
+//.navbar-inverse .navbar-brand {
+//  font-size: 20px;
+//  color:$color-font; //золотистый/
+//}
+
+//.navbar-brand {
+// font-weight: 500;
+//}
+
+.navbar .nav > li > a {
+  color: $color-font; //золотистый
+}
+
+.navbar .nav > li > a:hover {
+  background-color: transparent; //$color-body;
+  font-size: 25px;
+}
+
+
+
+*/

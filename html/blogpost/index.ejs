@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Latest Blog Post</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Latest Blog Post">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../lib/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../css/blogpost/bp_style.css" >
+
+
+    <!--<link rel="stylesheet" type="text/css" href="lib/fonts_my" >-->
+	<!--чтобы помочь старым версиям Интернет Эксплоера понять Html5 -->
+	<script src="lib/js/respond.min.js"></script>
+    <!--иконочные шрифты-->
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+    <link href="../lib/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+
+</head >
+
+
+<body>
+
+    <header>
+        <div class="header-bg">   <!-- в основном потоке, бежев -->
+            <h1>Latest Blog Post</h1>  <!--  симуляция для поисковика -->
+        </div>
+    </header>
+
+    <!-- в основном потоке, основной белый блок контента main-content -->
+    <div class="main-content">
+
+        <!-- Blog Last Post   в основном потоке -->
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="main-title-img">
+                        <img src="../img/blogpost/bp_Mainimg.jpg" class="title-img">
+                        <span >Latest Blog Post</span>
+                        <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </article>
+                        <button class="btn btn-m">MAIN BUTTON</button>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Main Blog в основном потоке -->
+        <section>
+            <% include bp_main_blog %>
+        </section>
+
+    </div> <!-- main-content-->
+
+
+
+    <footer>
+        <% include bp_footer %>
+    </footer>
+
+
+    <!-- Header-->
+    <!-- код для фиксированного вверху header вынуждена расположить внизу, т.к. проставление-->
+    <!-- z-index для элементов bootstrap не помогло (основной блок при скроллинге показывается поверх фиксированного header)-->
+    <!-- Но и с точки зрения поисковика в данном случае не критично - никаких ключевых слов здесь нет)-->
+    <% include bp_header-fix %>
+
+
+
+    <!-- ПОДКЛЮЧАЕМ СКРИПТЫ. Вообще-то рекомендуют это делать в head, но довольно большой объем у jquery-1.12.4.min.js, -->
+    <!-- а все остальные скрипты надо подкл ТОЛЬКО после него. Поэтому загрузка снесена вниз уже после загрузки картинки сайта. -->
+    <!-- для bootstrap подключаем jquery.  Т.к. большой объем, то рекомендуют перед закрытием body-->
+    <!-- можно выбрать или загрузку со своего сайта    я скачала с офиц сайта-->
+    <script src="../lib/js/jquery-1.12.4.min.js"></script>
+    <!-- вот еще варианты подключения    -->
+    <!--<script                        src="http://code.jquery.com/jquery-latest.min.js"></script>                                -->
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">   последняя версия      -->
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"> определенная версия -->
+
+    <!-- bootstrap.min.js (скрипті) надо загружать ОБЯЗАТЕЛЬНО ПОСЛЕ jquery-1.12.4.min.js-->
+    <script src="../lib/js/bootstrap.min.js"></script>
+    <!-- проверка подключен ли jQuery
+    <script type="text/javascript">
+        if (window.jQuery) alert("jQuery подключен");
+        else alert("jQuery не подключен");
+    </script>
+    -->
+
+    <!-- My scripts-->
+    <!--<script type="text/javascript" src="js/bp_date.js"></script>
+    -->
+    <script type="text/javascript" src="../js/blogpost/bp_sc.js"></script>
+    <script type="text/javascript" src="../js/blogpost/bp_check_email.js"></script>
+
+
+</body>
+</html>
+
+

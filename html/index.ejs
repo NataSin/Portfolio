@@ -1,0 +1,182 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Portfolio Frontend Developer Natalia</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Портфолио Фронтенд разработчика">
+    <meta name="keywords" content="Портфолио,Web разработчик">
+    <meta name="author" content="Синичкина Наталья">
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css" >    <!--подключаем бутстрап непосредственно в проект -->
+
+    <!--<link ??? rel="stylesheet" href="fonts/" >    -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans+Condensed:300i" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="css/style.css" >
+
+	<!--Включение адаптивных возможностей для старых браузеров. только надо скачать этот файл?   -->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
+
+	<!--чтобы помочь старым версиям Интернет Эксплоера понять Html5 -->
+	<script src="lib/js/respond.min.js"></script>	
+    <!--   еще можно так <script src="js/html5shiv.js"></script>    адаптация к IE-->
+
+    <!--иконочные шрифты-->
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/css/font-awesome.css" rel="stylesheet">-->
+    <link href="../lib/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+
+
+
+
+</head >
+
+
+
+
+<body>
+
+
+    <header>
+
+        <!-- меню  адаптивное -->
+        <nav class="row">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+                <!-- сворачивание меню в кнопку-три точки в случае коллапса - сворачивание экрана до размеров мобилки. Атрибуты начинающие с data отвечают за взаимодействие Html и Джаваскрипта.-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="navbar-header page-scroll">
+                    <a class="navbar-brand" href="#top">
+                        <span><img class="logo" src="../img/logoOK.gif" alt="" /></span>
+                        <span class="logo-name">NATALIA</span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right" id="collapse">
+                    <ul class="nav navbar-nav menu-skr">
+                        <li><a id="kuku" href="#"><span class="glyphicon glyphicon-eye-open"></span></a></li>   <!-- при нажатии на него - модальное окно -->
+                        <li><a href="#portfolio">Портолио</a></li> <!-- идем на закладку портфолио -->
+                        <li><a href="#aboutme">Обо мне</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+
+    </header>
+
+    <p id="top"></p>
+
+
+
+    <!--сюда подключим модальное окно modalwindow.ejs-->
+    <% include modalwindow %>
+
+
+
+
+    <div class="bigblock">
+
+        <div class="button-round menu-skr">
+                <h1>FRONT-END&nbsp&nbsp&nbspDEVELOPER&nbsp&nbsp&nbspPORTFOLIO</h1>
+
+                <a rel="nofollow" href="#portfolio"><img src="../img/round_buttonSmall.gif" width="100px" height="100px" alt="" title="Смотреть портфолио"/></a>
+
+                <ul class="ul-hr">
+                    <li>HTML5</li>
+                    <li> <span>.</span> </li>
+                    <li> CSS3</li>
+                    <li> <span>.</span> </li>
+                    <li>SASS</li>
+                    <li> <span>.</span> </li>
+                    <li>JQuery</li>
+                    <li> <span>.</span> </li>
+                    <li>Bootstrap</li>
+                    <li> <span>.</span> </li>
+                    <li>Responsive</li>
+                    <li> <span>.</span> </li>
+                    <li>GULP</li>
+                    <li> <span>.</span> </li>
+                    <li>Git</li>
+                    <li> <span>.</span> </li>
+                    <li>PhotoShop</li>
+                </ul>
+            <br>
+        </div>  <!--button-round -->
+    </div>  <!--bigblock -->
+
+
+    <section class="myportfolio">
+
+            <% include portfol %>
+            <div class="container">
+                <% include aboutme %>
+            </div>
+            <div class="container">
+                <% include contact %>
+            </div>
+
+
+    <!--кнопка круглая НАВЕРХ    <p><a href="#top">Наверх</a></p>-->
+    <footer>
+        <div class="menu-skr" >
+
+<!--                <a class="ancLinks" rel="nofollow" href="#top"><img src="../img/round_buttonUp.gif" width="60px" height="60px" alt="" title="Вверх"/></a>
+    -->            <a rel="nofollow" href="#top"><img src="../img/round_buttonUp.gif" width="60px" height="60px" alt="" title="Вверх"/></a>
+            <br>Copyright @ 2016 Natalia
+        </div>
+    </footer>
+
+
+
+
+</section>  <!--class="myportfolio"-->
+
+
+
+
+
+
+
+
+
+<!-- ПОДКЛЮЧАЕМ СКРИПТЫ. Вообще-то рекомендуют это делать в head, но довольно большой объем у jquery-1.12.4.min.js, -->
+<!-- а все остальные скрипты надо подкл ТОЛЬКО после него. Поэтому я решила снести все вниз уже после загрузки картинки сайта. -->
+<!-- для bootstrap подключаем jquery.  Т.к. большой объем, то рекомендуют перед закрытием body-->
+<!-- можно выбрать или загрузку со своего сайта    я скачала с офиц сайта-->
+<script src="lib/js/jquery-1.12.4.min.js"></script>
+<!-- вот еще варианты подключения    -->
+<!--<script                        src="http://code.jquery.com/jquery-latest.min.js"></script>                                -->
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">   последняя версия      -->
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"> определенная версия -->
+
+<!-- bootstrap.min.js (скрипті) надо загружать ОБЯЗАТЕЛЬНО ПОСЛЕ jquery-1.12.4.min.js-->
+<script src="lib/js/bootstrap.min.js"></script>
+<!-- проверка подключен ли jQuery
+<script type="text/javascript">
+    if (window.jQuery) alert("jQuery подключен");
+    else alert("jQuery не подключен");
+</script>
+-->
+
+<!-- мои скрипты долждны идти только после стандартного jquery, иначе будет ошибка
+<script type="text/javascript" src="js/sc.js"></script>
+    <script type="text/javascript" src="js/colornav.js"></script>
+-->
+<script type="text/javascript" src="js/modalwindow.js"></script>
+<script type="text/javascript" src="js/scroll_to.js"></script>
+
+
+</body>
+</html>
+
+

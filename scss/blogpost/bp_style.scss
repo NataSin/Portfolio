@@ -1,0 +1,73 @@
+@import "bp_myvar.scss";  //общие для всех файлов стилей переменные
+@import "bp_header-fix.scss"; //header  - заголовок с логотипом, меню
+@import "bp_main_blog.scss"; // Main Blog - основное содержимое
+@import "bp_footer.scss"; // Main Blog - основное содержимое
+@import "bp_mixins.scss"; // Main Blog - основное содержимое
+
+body {
+  background-color: $color-body;
+  font-family: $fontfamily;
+}
+
+.header-bg{
+  background-color: $color-body;
+  сolor: $color-body;               //шрифт и фон одинаковые, чтоб не видно было надписи-симулятора для поисковика
+  width: 100%;
+  height: $header-height+$body-rim ;//130px;
+  z-index:1000;
+}
+
+.title-img{ //ширина главной титульной картинки
+  width: 100%;
+}
+
+.main-content{        //белый блок контента
+  background-color: $color-content; //white
+  padding: $step;//50px;
+  margin:0 $margin 0 $margin;//0 10% 0 10%;
+}
+
+///////картинка с заголовком и MainButton
+.main-title-img {
+  top: 0;
+  position: relative;
+  width: 100%;
+  background-image: url("../img/blogpost/bp_Mainimg.jpg");
+
+  span {
+    @include mix-main-title-img;
+    font-size: 4.3vw;
+    bottom: $title-img-align-bottom +45;
+  }
+
+  article {
+    @include mix-main-title-img;
+    font-size: 1.6vw;
+    bottom: $title-img-align-bottom+22;
+    right: $title-img-align-left/2;
+  }
+}
+
+  .btn{
+    @include mix-main-title-img;
+    background-color: #e8930c;
+    font-weight: bold;
+    width: ($step)*4-15; //185px;
+    height: ($step)-3;//48px;
+    bottom: $title-img-align-bottom ;//10%
+    border: 2px outset rgb(226, 132, 24);
+    border-radius: 5px;
+    @media only screen and (max-width: 500px) {
+        width: ($step)*3;
+    }
+    @media only screen and (max-width: 380px) {
+        width: ($step)*2.4;
+    }
+  }
+
+  .btn:hover{
+    color: white;
+    border: 3px outset rgb(226, 132, 24);
+  }
+
+

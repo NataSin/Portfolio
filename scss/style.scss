@@ -1,0 +1,209 @@
+@import "scss/myvar.scss";  //общие для всех файлов стилей переменные
+@import "nav.scss";         //навигационное меню bootstrapa
+@import "modalwindow.scss"; //описание для модального окна
+
+//html { overflow-x:  hidden;}
+body {
+  background: url("../img/ladoni_sun.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: $color-font;
+  font-family: $fontfamily;
+}
+
+//логотип
+.logo{
+  position: fixed;
+  float: left;
+  height: 130px;
+  top: -15px;
+  left: 0;
+  &-name{
+    position: fixed;
+    left: 45px;
+    top: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.bigblock{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  h1{
+    font-size: 4vw;
+  }
+}
+
+//круглая кнопка
+.button-round {
+  position: relative;
+  top: 18%;
+  text-align: center;
+  color: $color-font;//white;
+}
+
+ul.ul-hr li {
+  display: inline;
+  padding: 0 2px;
+  font-size: 18px;
+  span{
+    vertical-align: 6px;
+  }
+}
+
+//////////////////////////////////////////////
+//залипание вверху для круглой кнопки
+.sticky {
+  position: fixed;
+  top: 80px;  /* если ноль заменить на число (и в скрипте sc.js тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
+  //!!!!! ЗДЕСЬ И В ФУНКЦИИ Ascroll ДОЛЖНЫ БЫТЬ ОДНИ И ТЕ ЖЕ ЧИСЛА   !!!
+  z-index: 102;
+}
+
+///////////////////////////////////////////
+//большой полупрозрачный бокс портфолио
+.myportfolio{
+  position: absolute;
+  margin-top: 65%;
+  width: 100%;
+  background-color:$color-font;
+  border: 1px solid $color-body;
+  opacity:0.93;
+}
+
+//слово-заголовок портфолио .Портфолио.
+.headportfolio {
+  color: $color-body;
+  font-family: $fontfamily;
+  font-size: 25px; //3vw;
+  text-align: center;
+  text-shadow: 0 1px 1px $color-pointheader;
+}
+
+//точки для обрамления слова-заголовка .Портфолио.
+.redpoint{
+  color: $color-pointheader;
+}
+
+a {
+  color: $color-font-aboutme;
+}
+
+
+.elementpotfolio{
+  text-align: center;
+  width: $width-el-portfolio;
+  heigth:$height-el-portfolio;
+  padding:0 9px 0;
+  color: $color-font-aboutme;
+  font-size: ($font-size-nav)-4 ;
+  float: left;
+}
+
+
+
+
+.pic {
+  width: 100%;//250px;
+  max-width: 250px;
+  height: auto;// 188px;
+  overflow: hidden; /*Скрывает все, что не влазит в блок*/
+  margin: 9px;
+  //border: 1px solid $color-font; /*Для всех браузеров*/
+ // border: 1px solid $color-font; /*Для IE6, IE7, IE8*/
+  -webkit-box-shadow: 2px 2px 3px $color-font-aboutme;
+  box-shadow: 2px 2px 3px $color-font-aboutme;
+
+  img {
+    width: 100%;//220px;
+    height: auto;//188px;
+  }
+}
+
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+
+
+
+//About Me
+.aboutme{
+  padding:50px 7% ;
+  color: $color-font-aboutme;
+  font-size: ($font-size-nav)-4;
+}
+
+
+//Contact
+.contact {
+
+  &-glyph {
+    width: 30px;
+    text-align: center;
+    font-size: 22px;
+    color: $color-pointheader;
+    display: inline;
+  }
+
+  &-comm {
+    display: inline;
+    font-size: 18px;
+    color: $color-body;
+    padding-right: 25px;
+  }
+
+  &-div {
+    text-align: left;//center;
+    padding-left: 50px;
+  }
+
+
+  &-div-div {
+    float: left;
+    padding-bottom: 80px;
+  }
+}
+
+#glyph-facebook{
+  position: relative;
+  float: left;
+  font-size: 32px;
+  padding-right: 30px;
+  margin-top: -7px;
+  a{ padding-bottom: 50px;
+    color: $color-body;
+  }
+}
+
+
+//Footer
+  footer div {
+    position: absolute;  //по отношению к общего телу сайта
+    vertical-align: bottom;
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 3px 0;
+  }
+
+  footer div p{
+    text-align: center;
+  }

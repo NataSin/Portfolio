@@ -1,0 +1,69 @@
+@import "bp_myvar.scss";
+@import "bp_main_blog.scss";
+@import "bp_header-fix.scss";
+@import "bp_mixins.scss";
+
+footer {
+  div {
+    width: 100%;
+    height: auto; //335px;
+    background-color: $color-footer;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-top: $body-rim; //40px;
+  }
+  hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    background-color: $color-dark; /* Цвет линии для браузера Firefox и Opera */
+    height: 1.3px; /* Толщина линии */
+    box-shadow: 1px 1.5px 1px $color-footer-hr;
+  }
+}
+
+  .footer{
+    &-middle-col{
+      margin-top: -1%;
+    }
+
+    &-header{
+      color: $color-dark  ;
+      width: 100%;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &-li >li> a,  &-name-align  a{
+      @include footer-li-style;
+    }
+
+    &-letter-align{                  //иконочный символ
+      @include icon-shrift-align;
+      @include footer-li-style;
+    }
+
+    &-li {
+      list-style: none;
+      margin-left: -20%;
+      :hover:visited {
+        @include footer-hover;
+      }
+    }
+
+    &-name-align a:hover:visited {
+      @include footer-hover;
+    }
+
+    &-div-search{
+      margin-left: -6%;
+      width: $step*4.5;
+    }
+
+
+  }
+
+
+
+
+
+
+

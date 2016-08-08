@@ -1,0 +1,118 @@
+@import "bp_myvar.scss";  //общие для всех файлов стилей переменные
+//Header
+
+//Logo
+.logo {
+  position: absolute;
+  margin-top: 0.1vw;//6px;
+  left: $margin;//10%;
+  z-index: 1050;
+  width: 12vw;//125px;
+  @media only screen and (min-width: 320px) {
+    margin-top: 11px;
+    width: 100px;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 114px;
+  }
+  @media only screen and (min-width: 970px) {
+    width: 125px;
+  }
+  @media only screen and (min-width: 1000px) {
+    width: 140px;
+    margin-top: 0.1vw;//6px;
+  }
+}
+
+
+.header {
+  &-main {
+    background-color: $color-content;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  //Search
+  &-search-div{
+    float: right !important;
+    margin-right: 11vw;
+    margin-top: 1%;
+    width: $step*5;
+  }
+
+  //верхняя левая надпись
+  &-up {
+    &-left {
+      margin-left: 23.5vw;
+      margin-top: 10px;
+      float: left;
+      color: $color-header-left;
+      font-size: $font-size-header-up; //10px;
+      font-weight: bold;
+    }
+
+    //верхнее правое меню
+    &-right {
+      font-size: $font-size-header-up+1; //11px;
+      padding-top: 9px;
+      padding-left: 64%;
+      @media only screen and (max-width: 1200px) {
+        padding-left: 60%;
+      }
+      @media only screen and (max-width: 900px) {
+        padding-left: 65%;
+      }
+    }
+
+    &-right li {
+      display: inline;
+    }
+
+    &-right a { //верхнее правое меню     пункты
+      color: $color-dark;
+      padding: 4px 5px 4px 2px;
+    }
+  }
+}
+
+
+  #header-up-right-digit{
+    color: $color-main-button;
+    font-size: $font-size-header-up+2;
+    font-weight: 600;
+  }
+
+
+  .input-search {
+    width: 300px;
+  }
+
+
+  //меню навигация nav
+
+  .navbar-default {
+    background-color: $color-content;
+    border-color: transparent;
+    margin-left: ($margin*2)+3;//23%;
+    .navbar-nav>li>a {
+      color: $color-dark  ;
+      font-weight: bold;
+      font-size: $font-size-main-hea  ;//14px;
+    }
+  }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: $color-body ;
+}
+
+
+  //.navbar-default .navbar-nav>li>a{    //не подходит - слишком высокий бордюр
+  //  border-right: 1px solid #ddd;
+  //}
+
+  .navbar-toggle {
+    margin-right: $margin+1;//11%;
+  }
+
+

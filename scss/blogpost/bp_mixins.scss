@@ -1,0 +1,45 @@
+@mixin footer-li-style{                                  //миксин стиль пунктов левого SideBar
+  color: $color-content ;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@mixin footer-hover{                                  //миксин стиль пунктов левого SideBar
+  color: $color-content !important;
+  text-decoration: underline;
+}
+
+@mixin name-style{                                  //миксин стиль пунктов левого SideBar
+  color: $color-dark;
+  font-size: $font-size-main-hea   ;//14px;
+  font-weight: bold;
+}
+
+@mixin icon-shrift-align{
+  width: 30px;
+  text-align: center;
+}
+
+//миксин style placeholder Email, Search
+@mixin input-w-style{
+  color: $color-footer;
+  font-size: ($font-size-main-hea)-2;//12px;
+  font-style: italic;
+}
+
+//стиль шрифта для date и user одинаковый, но классы д.б. разные для динамического формирования значений объектов
+@mixin date-user-style{
+  color: $color-avatar;
+  font-size: ($font-size-main-hea)-2   ;//12px;
+  font-weight: bold;
+  font-style: italic;
+  float: left;
+}
+
+//миксин выравнивания объектов внутри главной картинки
+@mixin mix-main-title-img{
+  position: absolute;
+  left: $title-img-align-left;  //5%
+  color: $color-body;
+}
+
